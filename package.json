@@ -1,0 +1,45 @@
+{
+  "name": "domain-hunter-mcp",
+  "version": "1.0.0",
+  "description": "MCP server: brainstorm brandable domains, live RDAP/WHOIS availability, verified pricing, DNS/SSL/WHOIS lookups",
+  "main": "dist/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main-http.js",
+    "start:stdio": "node dist/main-stdio.js",
+    "dev": "tsx src/main-http.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "domains",
+    "rdap",
+    "whois",
+    "dns",
+    "ssl",
+    "grok"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4"
+  },
+  "type": "module",
+  "bin": {
+    "domain-hunter-mcp": "dist/main-stdio.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
