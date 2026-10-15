@@ -1,5 +1,8 @@
 # Domain Hunter (MCP server)
 
+**Live MCP URL (Streamable HTTP):** `https://domain-hunter-mcp.vercel.app/mcp`  
+Health check: `https://domain-hunter-mcp.vercel.app/health`
+
 Domain Hunter helps you find and research domain names. You give it an idea, and it brainstorms brandable names, checks **live availability** across TLDs, shows **verified list prices**, flags expiring or dropping names, and runs DNS, SSL and RDAP/WHOIS lookups on any domain.
 
 **It never registers or buys anything.** The most it can do is prepare a registrar link, and only after the user explicitly confirms. The user completes checkout themselves.
