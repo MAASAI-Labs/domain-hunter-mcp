@@ -7,6 +7,24 @@ Domain Hunter helps you find and research domain names. You give it an idea, and
 
 **It never registers or buys anything.** The most it can do is prepare a registrar link, and only after the user explicitly confirms. The user completes checkout themselves.
 
+## Use in Cursor
+
+**From the Cursor Marketplace:** once listed, install it from https://cursor.com/marketplace (publisher MAASAI Labs). The plugin manifest lives in https://github.com/MAASAI-Labs/cursor-plugins.
+
+1. Search the Marketplace for this plugin and click **Install**.
+2. Check the server is enabled under Cursor Settings, then MCP. Plugin servers show with a `plugin-` prefix.
+
+**Manually:** add the hosted server to `~/.cursor/mcp.json` (or `.cursor/mcp.json` in a project):
+
+```json
+{
+  "mcpServers": {
+    "domain-hunter": { "url": "https://domain-hunter-mcp.vercel.app/mcp" }
+  }
+}
+```
+
+
 ## Tools
 
 | Tool | What it does |
@@ -66,6 +84,12 @@ No credentials needed.
 3. `check_availability` with `{"domains": ["google.com", "zqxv-not-real-8841.com"]}`: google.com is ❌ registered, and the other is ✅ available at the Porkbun .com price.
 4. `domain_lookup` with `{"domain": "x.ai"}`, `dns_lookup` with `{"domain": "x.ai"}`, and `ssl_certificate` with `{"domain": "x.ai"}`.
 5. `prepare_purchase_link` with `userConfirmed: false` returns an error asking for confirmation. With `true`, it returns a link and the line "Nothing has been purchased".
+
+## Privacy and terms
+
+- Privacy policy: https://maasai.tech/privacy
+- Terms of use: https://maasai.tech/terms
+- Support and data requests: colepresley000@gmail.com
 
 ## License
 
